@@ -1,0 +1,95 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6e6;
+}
+/*
+#container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+    */
+
+h2 {
+    font-size: 22px;
+}
+
+button {
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.yes {
+    background-color: #4CAF50;
+    color: white;
+}
+.yes:hover, .next:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+.no {
+    background-color: #f44336;
+    color: white;
+}
+.no:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+img {
+    display: none;
+    width: 150px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Special pop-up animation */
+.popup {
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.5); /* Start small */
+    transition: all 0.5s ease-in-out;
+}
+
+/* Add this class via JavaScript to animate */
+.animate {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Normal size */
+}
+/* Fade-in with scale effect */
+@keyframes fadeScale {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.fade-scale {
+    animation: fadeScale 0.6s ease-out;
+}
+
+
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+    button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
